@@ -2,7 +2,7 @@ var quizInput = document.querySelector("#quiz-tri");
 var buttonInput = document.querySelector("#check-ans");
 var outputScore = document.querySelector("#output-score");
 
-var correctAnswer = ["90°", "right angle"];
+var correctAnswer = ["90°", "right angle","equilateral","√3/2a2","Isosceles"];
 function getScore() {
   var score = 0;
   let index = 0;
