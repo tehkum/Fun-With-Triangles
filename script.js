@@ -3,12 +3,15 @@ var calculateArea = document.querySelector("#calculate-area");
 var outputArea = document.querySelector("#output-area");
 
 function displayAreaOfTriangle() {
+  if(sideInput[0].value >0 && sideInput[1].value >0 && sideInput[2].value >0){
   let semiPerimeter = (Number(sideInput[0].value) + Number(sideInput[1].value) + Number(sideInput[2].value)) / 2;
   // console.log(semiPerimeter)
   let areaOfTriangle = (Math.sqrt((semiPerimeter) * (semiPerimeter - Number(sideInput[0].value)) * (semiPerimeter - Number(sideInput[1].value)) * (semiPerimeter - Number(sideInput[2].value))));
   // console.log(areaOfTriangle)
   outputArea.innerText = "The area of the triangle is : " + areaOfTriangle;
-}
+}else{
+  outputArea.innerText = "invalid";
+}}
 
 calculateArea.addEventListener("click", () => displayAreaOfTriangle());
 // console.log(sideInput[0].value + sideInput[1].value + sideInput[2].value)
